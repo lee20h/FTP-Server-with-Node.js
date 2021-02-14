@@ -3,5 +3,7 @@ extends layout/main
 block content
     .form-container
         form(action=`/file${routes.fileUpload}`, method="post", entype="multipart/form-data")
-            input(type="file", name="filename")
-            input(type="submit", value="upload")
+            div.fileUpload
+                label(for="file") File
+                input(type="file", name="file", required=true)
+            button(type="submit") Upload

@@ -4,7 +4,7 @@ import logger from "morgan";
 import routes from "./routes";
 import path from "path";
 import globalRouter from "./routers/globalRouter";
-import { Locals, setPolicy } from "./middlewares";
+import { Locals } from "./middlewares";
 import fileRouter from "./routers/fileRouter";
 
 const app = express();

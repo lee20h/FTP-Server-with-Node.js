@@ -1,8 +1,13 @@
-export const fileUpload = async (req, res) => {
+import routes from "../routes";
+
+export const fileUploadFunc = async (req, res) => {
   const {
-    body: { filename },
+    body: { file },
   } = req;
-  console.log(filename);
-  console.log(req.file);
-  res.redirect("/");
+  try {
+    console.log(req.file);
+  } catch (error) {
+    console.log(error);
+  }
+  // res.redirect(routes.home);
 };
